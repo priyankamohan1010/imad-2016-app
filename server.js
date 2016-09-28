@@ -1,11 +1,12 @@
-var express = require('express');
-var morgan = require('morgan');
+var express = require('express'); // create web server
+var morgan = require('morgan'); //output logs of r server
+
 var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
 
-app.get('/', function (req, res) {
+app.get('/', function (req, res) {  // get request
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
