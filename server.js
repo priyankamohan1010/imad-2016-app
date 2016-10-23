@@ -13,6 +13,9 @@ app.get('/', function (req, res) {  // get request
 app.get('/login.html', function (req, res) {  // get request
   res.sendFile(path.join(__dirname, 'ui','login.html'));
 });
+app.get('/profile.php', function (req, res) {  // get request
+  res.sendFile(path.join(__dirname, 'ui','profile.php'));
+});
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
